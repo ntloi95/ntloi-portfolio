@@ -94,7 +94,9 @@ class HomeIndex extends React.Component {
             <p>
               The copy of{' '}
               <a
-                href={`https://docs.google.com/gview?url=${cv}`}
+                href={`https://docs.google.com/gview?url=${
+                  window.location.href
+                }${cv}`}
                 target="_blank"
               >
                 my resume{' '}
