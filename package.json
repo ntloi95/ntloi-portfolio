@@ -1,6 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "engines": {
+    "node": "8.11.0"
+  },
+  "name": "ntloi-portfolio",
+  "description": "Nguyen Thanh Loi's Portfolio",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
