@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 // import Lightbox from 'react-images'
@@ -82,7 +83,12 @@ class HomeIndex extends React.Component {
             </p>
             <ul className="actions">
               <li>
-                <a href={cv} target="_blank" className="button">
+                <a
+                  href={cv}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="button"
+                >
                   Learn More
                 </a>
               </li>
@@ -93,12 +99,7 @@ class HomeIndex extends React.Component {
             <h2>Get In Touch</h2>
             <p>
               The copy of{' '}
-              <a
-                href={`https://docs.google.com/gview?url=${
-                  window.location.href
-                }${cv}`}
-                target="_blank"
-              >
+              <a href={cv} target="_blank" rel="noopener noreferrer">
                 my resume{' '}
               </a>{' '}
               further reveals my background, computer science knowledge and
