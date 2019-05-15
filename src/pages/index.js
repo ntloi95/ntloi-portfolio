@@ -1,54 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-// import Lightbox from 'react-images'
 import cv from '../assets/cv.pdf'
+import '../assets/css/index.css'
+import cloudIcon from '../assets/images/cloud-icon.png'
 
 class HomeIndex extends React.Component {
   constructor() {
     super()
 
-    this.state = {
-      lightboxIsOpen: false,
-      currentImage: 0,
-    }
-
-    this.closeLightbox = this.closeLightbox.bind(this)
-    this.gotoNext = this.gotoNext.bind(this)
-    this.gotoPrevious = this.gotoPrevious.bind(this)
-    this.openLightbox = this.openLightbox.bind(this)
-    this.handleClickImage = this.handleClickImage.bind(this)
-  }
-
-  openLightbox(index, event) {
-    event.preventDefault()
-    this.setState({
-      currentImage: index,
-      lightboxIsOpen: true,
-    })
-  }
-  closeLightbox() {
-    this.setState({
-      currentImage: 0,
-      lightboxIsOpen: false,
-    })
-  }
-  gotoPrevious() {
-    this.setState({
-      currentImage: this.state.currentImage - 1,
-    })
-  }
-  gotoNext() {
-    this.setState({
-      currentImage: this.state.currentImage + 1,
-    })
-  }
-  handleClickImage() {
-    if (this.state.currentImage === this.props.images.length - 1) return
-
-    this.gotoNext()
+    this.state = {}
   }
 
   render() {
@@ -64,22 +26,18 @@ class HomeIndex extends React.Component {
 
         <div id="main">
           <section id="one">
-            <header className="major">
-              <h3>
-                With a good Bachelor’s Degree in Honor Program Computer Science
-                in Vietnam National University, being a competitive programming
-                former, almost two years of hands-on experience building and
-                developing cloud software applications, I confidently become to
-                a Backend Applications Software Engineer.
-                <br />
-              </h3>
-            </header>
+            <h2> Loi Nguyen</h2>
+            <image src={cloudIcon} />
             <p>
-              I have been involved in various scale server-side applications and
-              understand how a reliable infrastructure is essential to software
-              scalability. While it may be easy to focus on features, I’ve found
-              that the algorithms, data structures, and optimization are
-              tremendously necessary for a strong engineer.
+              &emsp;Backend Software Engineer. Learn, work, and play with Cloud
+              on cloud in a cloudy day.
+            </p>
+            <p>
+              &emsp;I have been involved in various scale server-side
+              applications and understand how a reliable infrastructure is
+              essential to software scalability. While it may be easy to focus
+              on features, I’ve found that the algorithms, data structures, and
+              optimization are tremendously necessary for a strong engineer.
             </p>
             <ul className="actions">
               <li>
@@ -94,11 +52,125 @@ class HomeIndex extends React.Component {
               </li>
             </ul>
           </section>
-
+          <section>
+            <h2>My stories</h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                  <a
+                    href="#portfolioModal1"
+                    class="portfolio-link"
+                    data-toggle="modal"
+                  >
+                    <div class="caption">
+                      <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x" />
+                      </div>
+                    </div>
+                    <img
+                      src="img/portfolio/cabin.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                  <a
+                    href="#portfolioModal2"
+                    class="portfolio-link"
+                    data-toggle="modal"
+                  >
+                    <div class="caption">
+                      <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x" />
+                      </div>
+                    </div>
+                    <img
+                      src="img/portfolio/cake.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                  <a
+                    href="#portfolioModal3"
+                    class="portfolio-link"
+                    data-toggle="modal"
+                  >
+                    <div class="caption">
+                      <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x" />
+                      </div>
+                    </div>
+                    <img
+                      src="img/portfolio/circus.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                  <a
+                    href="#portfolioModal4"
+                    class="portfolio-link"
+                    data-toggle="modal"
+                  >
+                    <div class="caption">
+                      <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x" />
+                      </div>
+                    </div>
+                    <img
+                      src="img/portfolio/game.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                  <a
+                    href="#portfolioModal5"
+                    class="portfolio-link"
+                    data-toggle="modal"
+                  >
+                    <div class="caption">
+                      <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x" />
+                      </div>
+                    </div>
+                    <img
+                      src="img/portfolio/safe.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                  <a
+                    href="#portfolioModal6"
+                    class="portfolio-link"
+                    data-toggle="modal"
+                  >
+                    <div class="caption">
+                      <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x" />
+                      </div>
+                    </div>
+                    <img
+                      src="img/portfolio/submarine.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
           <section id="three">
             <h2>Get In Touch</h2>
             <p>
-              The copy of{' '}
+              &emsp;The copy of{' '}
               <a href={cv} target="_blank" rel="noopener noreferrer">
                 my resume{' '}
               </a>{' '}
@@ -139,21 +211,3 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex
-
-export const query = graphql`
-  query Index {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          timeToRead
-          frontmatter {
-            title
-            path
-            date
-          }
-        }
-      }
-    }
-  }
-`
