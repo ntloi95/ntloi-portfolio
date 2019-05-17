@@ -21,13 +21,15 @@
 		"react": "^16.5.1",
 		"react-dom": "^16.5.1",
 		"react-helmet": "^5.2.0",
-		"react-images": "^0.5.19"
+		"react-images": "^0.5.19",
+		"typescript": "3.4.3"
 	},
 	"keywords": [
 		"gatsby"
 	],
 	"license": "MIT",
 	"scripts": {
+		"start": "gatsby serve",
 		"build": "gatsby build",
 		"develop": "gatsby develop",
 		"format": "prettier --write '**/*.js'",
